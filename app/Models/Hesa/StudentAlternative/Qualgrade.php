@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Models\Hesa\StudentAlternative;
+
+// use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Qualgrade extends Model {
+
+    // use HasFactory;
+    protected $table = 'hesa_student_alternative_qualgrade';
+
+    public function getHesaLabelAttribute() {
+        return $this->hesa_code;
+    }
+
+    public static function getStudenAlternativeQualgrade() {
+        return Qualgrade::orderBy('id', 'ASC')->get();
+    }
+
+}
