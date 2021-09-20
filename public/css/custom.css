@@ -1,0 +1,232 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-Jun-2021, 14:41:43
+    Author     : Mariola
+*/
+
+
+/* Banner*/
+.bg-banner{
+    background: rgb(255,201,97);
+    background: linear-gradient(90deg, rgba(255,201,97,1) 0%, rgba(9,9,121,1) 26%, rgba(13,9,121,1) 38%, rgba(183,31,113,1) 74%);
+}
+
+/*Progress Bar - Vertical*/
+.StepProgress {
+    list-style: none;
+    color: rgb(25,21,87);
+}
+.StepProgress::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 10px;
+    height: 100%;
+    border-left: 2px solid #ccc;
+}
+.StepProgress-item {
+    position: relative;
+    counter-increment: list;
+}
+.StepProgress-item:not(:last-child) {
+    padding-bottom: 40px;
+}
+.StepProgress-item::before {
+    display: inline;
+    content: "";
+    position: absolute;
+    left: -21px;
+    height: 100%;
+    width: 10px;
+}
+.StepProgress-item::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -3px;
+    left: -37px;
+    width: 33px;
+    height: 33px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.StepProgress-item.is-done::before {
+    border-left: 2px solid #b71f71; 
+}
+.StepProgress-item.is-done::after {
+    content: '\2713';
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid #b71f71;
+    background-color: #b71f71;
+}
+.StepProgress-item.current::before {
+    border-left: 2px solid #b71f71;
+}
+.StepProgress-item.current::after {
+    content: counter(list);
+    padding-top: 0px;
+    width: 33px;
+    height: 33px;
+    top: -4px;
+    left: -38px;
+    font-size: 20px;
+    text-align: center;
+    color: #b71f71;
+    border: 2px solid #b71f71;
+    background-color: white;
+}
+.StepProgress div {
+    display: block;
+    margin-left:10px;
+}
+.StepProgress-item.current div {
+    display: block;
+    margin-left:10px;
+    font-weight: 700;
+}
+.StepProgress div:hover{
+    color: #3730a3;
+
+}
+
+/*Progress Bar - Horizontal*/
+.stepper-horizontal {
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+}
+.stepper-horizontal .step {
+    display: table-cell;
+    position: relative;
+    padding: 1.5rem 0;
+    z-index: 2;
+    width: 12.5%;
+    counter-increment: list;
+}
+
+.stepper-horizontal .step:last-child .step-bar-left, .stepper-horizontal .step:last-child .step-bar-right {
+    display: none;
+}
+.stepper-horizontal .step .step-circle {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.75rem;
+    font-size: 1.3rem;
+
+    z-index: 2;
+    border: 2px solid gray;
+    content: "";
+}
+.stepper-horizontal .step.is-done .step-circle {
+    background-color: #b71f71;
+    border: 2px solid #b71f71;
+    /*color: #FFFFFF;*/
+}
+.stepper-horizontal .step.is-done .step-circle:before {
+    font-weight: 100;
+    content: '\2713';
+    color:white !important;
+    font-weight: 600;
+}
+.stepper-horizontal .step.is-done .step-circle * {
+    display: none;
+}
+.stepper-horizontal .step.is-done .step-title {
+    color: rgb(25,21,87);
+}
+.stepper-horizontal .step.current .step-circle {
+    background: #fff;
+    border-color: #b71f71;
+    color: #fff;
+    position: relative;
+
+}
+.stepper-horizontal .step.current .step-circle::after {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.75rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #b71f71;
+    content: counter(list);
+    background: #fff;
+    color: #b71f71;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+.stepper-horizontal .step.current .step-title {
+    color: rgb(25,21,87);
+    font-weight: bold;
+    line-height: 13px;
+}
+.stepper-horizontal .step .step-title {
+    /*margin-top: 1rem;*/
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: rotate(43deg);
+    margin-left: 18px;
+    margin-top:30px;
+    color: rgb(25,21,87);
+
+    line-height: 13px;
+}
+.stepper-horizontal .step .step-title:hover {
+    color: #3730a3;
+}
+.stepper-horizontal .step .step-bar-left, .stepper-horizontal .step .step-bar-right {
+    position: absolute;
+    top: calc(2rem + 5px);
+    height: 3px;
+    background-color: gray;
+    border: solid gray;
+    border-width: 1px 0;
+}
+.stepper-horizontal .step .step-bar-left {
+    width: calc(100% - 2rem);
+    left: 50%;
+    margin-left: 1rem;
+    z-index: -1;
+}
+.stepper-horizontal .step .step-bar-right {
+    width: 0;
+    left: 50%;
+    margin-left: 1rem;
+    z-index: -1;
+    transition: width 500ms ease-in-out;
+}
+.stepper-horizontal .step.is-done .step-bar-right {
+    background-color: #b71f71;
+    border-color: #b71f71;
+    z-index: 3;
+    width: calc(100% - 2rem);
+}
+
+/*part 2, part 3*/
+.required_field:after{
+    content:'*';
+}
+
+.error{color:red !important}
+
+/*part 7*/
+.more_gualification_wrapper{
+    display:none;
+}
