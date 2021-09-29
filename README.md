@@ -1,10 +1,8 @@
-<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/TSE_StudenAPP_desktop.jpg">
-<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/TSE_StudenAPP_mobile.jpg">
-<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/TSE_StudenAPP_tablet.jpg">
+<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudenAPP_desktop.jpg">
+<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudenAPP_mobile.jpg">
+<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudenAPP_tablet.jpg">
 
 ****************************************************************************************************
-
-
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
