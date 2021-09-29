@@ -1,6 +1,6 @@
-<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudenAPP_desktop.jpg">
-<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudenAPP_mobile.jpg">
-<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudenAPP_tablet.jpg">
+<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudentAPP_desktop.jpg">
+<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudentAPP_mobile.jpg">
+<img src="https://github.com/mariolawolska/TSE_StudentFormApp/blob/master/public/img/TSE_StudentAPP_tablet.jpg">
 
 ****************************************************************************************************
 
